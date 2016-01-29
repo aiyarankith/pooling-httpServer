@@ -21,8 +21,8 @@ Libraries:
 ---
 The following libraries are used:
 
-1. `httpclient 4.3.6`: HTTP client for multi-threading
-2. `jackrabbit-webdav 2.8.0`: DomUtil class
+1. `httpclient`: HTTP client for multi-threading
+2. `jackrabbit-webdav`: DomUtil class
 3. `slf4j`: logging
 4. `ch.qos.logback`: log-back support.
 5. `pom.xml`: maven 
