@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<supportedmethods>
+		<supportedmethod>
+		  <class name="com.http.methods.HttpGetHandler" />
+		</supportedmethod>
+		<supportedmethod>
+		  <class name="com.http.methods.HttpDeleteHandler" />
+		</supportedmethod>		
+	</supportedmethods>
+</config>
