@@ -50,7 +50,7 @@ public class HttpServerTest extends TestCase {
 		connectionMngr.setParams(params);
 		
 		client = new HttpClient(connectionMngr);
-		client.setHostConfiguration(hostConf);		
+		client.setHostConfiguration(hostConf);	
 	}
 
 	@Test
@@ -85,35 +85,8 @@ public class HttpServerTest extends TestCase {
 			method.releaseConnection();
 		}
 	}
-	
-	/**
-	 * Test getting a resource that does not exist on the server. In this case,
-	 * a status code of 404 (NOT FOUND) should be returned.
-	 * 
-	 */
-	@Test
-	public void testGetNonExistingResource() throws Exception {
-		GetMethod gm = new GetMethod("/sample.txt");
-		int status = client.executeMethod(gm);
-		
-		assertEquals(HttpResponse.SC_NOT_FOUND, status);
-	}
 
-	/**
-	 * The HTTP Options method is not yet implemented and hence unsupported by
-	 * the server. We expect that the server returns a 501 status code
-	 * indicating that the action is not implemented.
-	 */
-	@Test
-	public void testMethodNotImplemented() throws Exception {
-		String uri = "/";
-		OptionsMethod om = new OptionsMethod(uri);
-		int status = client.executeMethod(om);
-		
-		assertEquals(HttpResponse.SC_NOT_IMPLEMENTED, status);
-	}
-
-	// ----------------------------------------------< Concurrent request Test >---
+	// -----------------------< Concurrent request Test >---
 	
 	@Test
 	public void testConcurrentGetRequests() throws Exception {
