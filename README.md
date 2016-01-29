@@ -15,6 +15,7 @@ I have tried to extend the implementation by adding these features to the base c
 2. Use of `maven` for dependency management.
 3. Made use of `SLF4` for logging 
 4. Implementing the `Get Handler` and `Delete Handler` methods. 
+5. Implemented the extension of `HTTP keep-alive` behavior.
  
 Libraries:
 ---
